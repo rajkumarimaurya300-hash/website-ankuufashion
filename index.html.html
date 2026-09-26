@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Ankuuu Art Fashion – Handcrafted ethnic art & fashion. Custom stone work, embroidery, blouse designs & handmade creations crafted with elegance."/>
+<title>Ankuuu Art Fashion | Handcrafted Ethnic Art & Luxury Fashion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --maroon: #6B1C2A;
+    --maroon-deep: #4A1018;
+    --maroon-light: #8B2535;
+    --gold: #C9A84C;
+    --gold-light: #E4C67A;
+    --gold-pale: #F5E6B8;
+    --cream: #FAF3E8;
+    --cream-dark: #F0E4CC;
+    --black: #0D0608;
+    --black-soft: #1A0D0F;
+    --emerald: #1B4D3E;
+    --emerald-light: #2E6B54;
+    --beige: #EDE0CC;
+    --text-light: #F5EEE0;
+    --text-muted: rgba(245,238,224,0.6);
+    --shadow-gold: 0 8px 32px rgba(201,168,76,0.2);
+    --shadow-deep: 0 20px 60px rgba(10,0,5,0.5);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--text-light);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: default;
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--black); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 0 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    background: rgba(13,6,8,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    height: 60px;
+    border-bottom-color: rgba(201,168,76,0.3);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--text-light); font-weight: 300; }
+  .nav-links {
+    display: flex; gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.72rem; font-weight: 400;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: -4px; left: 0; right: 0; height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .nav-cta {
+    background: var(--maroon);
+    border: 1px solid var(--gold);
+    color: var(--gold-light) !important;
+    padding: 0.45rem 1.2rem;
+    border-radius: 2px;
+    font-size: 0.68rem !important;
+    letter-spacing: 0.15em !important;
+  }
+  .nav-cta:hover { background: var(--maroon-light) !important; }
+  .nav-cta::after { display: none !important; }
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer;
+  }
+  .hamburger span {
+    display: block; width: 24px; height: 1px;
+    background: var(--gold); transition: all 0.3s;
+  }
+
+  /* ── HERO ── */
+  #hero {
+    position: relative;
+    height: 100vh; min-height: 700px;
+    display: flex; align-items: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(107,28,42,0.5) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 80% at 20% 30%, rgba(27,77,62,0.25) 0%, transparent 60%),
+      linear-gradient(135deg, #0D0608 0%, #1A0810 40%, #120508 100%);
+  }
+  .hero-pattern {
+    position: absolute; inset: 0;
+    background-image: 
+      repeating-linear-gradient(45deg, transparent, transparent 30px, rgba(201,168,76,0.03) 30px, rgba(201,168,76,0.03) 31px),
+      repeating-linear-gradient(-45deg, transparent, transparent 30px, rgba(201,168,76,0.03) 30px, rgba(201,168,76,0.03) 31px);
+  }
+  /* Decorative mandala rings */
+  .hero-ring {
+    position: absolute; border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.12);
+    animation: rotateRing 30s linear infinite;
+  }
+  .hero-ring:nth-child(1) { width: 500px; height: 500px; top: 10%; right: -100px; animation-duration: 40s; }
+  .hero-ring:nth-child(2) { width: 340px; height: 340px; top: 20%; right: -20px; animation-duration: 25s; animation-direction: reverse; border-color: rgba(201,168,76,0.08); }
+  .hero-ring:nth-child(3) { width: 200px; height: 200px; top: 35%; right: 80px; animation-duration: 20s; border-color: rgba(201,168,76,0.18); }
+  @keyframes rotateRing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  /* Gold dots pattern */
+  .hero-dots {
+    position: absolute; right: 8%; top: 50%; transform: translateY(-50%);
+    display: grid; grid-template-columns: repeat(8, 1fr); gap: 18px;
+    opacity: 0.25;
+  }
+  .hero-dots span {
+    width: 3px; height: 3px; border-radius: 50%;
+    background: var(--gold);
+    display: block;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 0 6vw;
+    max-width: 700px;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.65rem; font-weight: 400;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    opacity: 0; animation: fadeUp 0.8s 0.2s ease forwards;
+  }
+  .hero-badge::before, .hero-badge::after {
+    content: ''; display: block;
+    width: 40px; height: 1px; background: var(--gold); opacity: 0.6;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    font-weight: 700; line-height: 1.1;
+    color: var(--text-light);
+    margin-bottom: 1.2rem;
+    opacity: 0; animation: fadeUp 0.9s 0.4s ease forwards;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-light);
+    display: block;
+  }
+  .hero-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.92rem; font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    opacity: 0; animation: fadeUp 1s 0.6s ease forwards;
+  }
+  .hero-btns {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 1s 0.8s ease forwards;
+  }
+  .btn-primary {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--black);
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    padding: 0.9rem 2.2rem;
+    border: none; border-radius: 2px;
+    cursor: pointer; text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.35);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(201,168,76,0.5);
+  }
+  .btn-whatsapp {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.72rem; font-weight: 400;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold-light);
+    background: transparent;
+    padding: 0.9rem 2.2rem;
+    border: 1px solid rgba(201,168,76,0.5);
+    border-radius: 2px;
+    cursor: pointer; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  .btn-whatsapp:hover {
+    background: rgba(201,168,76,0.08);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-muted);
+    animation: bounce 2s infinite;
+  }
+  .hero-scroll-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── MARQUEE ── */
+  .marquee-wrap {
+    overflow: hidden;
+    border-top: 1px solid rgba(201,168,76,0.2);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    background: rgba(201,168,76,0.04);
+    padding: 1rem 0;
+  }
+  .marquee-inner {
+    display: flex; gap: 0;
+    animation: marquee 30s linear infinite;
+    white-space: nowrap;
+  }
+  .marquee-item {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem; font-weight: 300;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold);
+    padding: 0 2.5rem;
+    display: flex; align-items: center; gap: 2.5rem;
+  }
+  .marquee-item::after {
+    content: '✦';
+    font-size: 0.6rem;
+    color: var(--maroon-light);
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ── SECTIONS BASE ── */
+  section { position: relative; }
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 5vw; }
+  .section-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.62rem; font-weight: 400;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold);
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 1rem;
+  }
+  .section-label::before {
+    content: ''; display: block;
+    width: 30px; height: 1px; background: var(--gold); opacity: 0.6;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700; line-height: 1.2;
+    color: var(--text-light);
+  }
+  .section-title em { font-style: italic; color: var(--gold-light); }
+  .section-sub {
+    font-size: 0.88rem; font-weight: 300;
+    color: var(--text-muted); line-height: 1.9;
+    max-width: 500px;
+    margin-top: 0.8rem;
+  }
+  .gold-divider {
+    width: 60px; height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin: 1.5rem 0;
+  }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal {
+    opacity: 0; transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-left {
+    opacity: 0; transform: translateX(-40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-left.visible { opacity: 1; transform: translateX(0); }
+  .reveal-right {
+    opacity: 0; transform: translateX(40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+  /* ── ABOUT ── */
+  #about {
+    padding: 120px 0;
+    background: linear-gradient(180deg, var(--black) 0%, #120508 50%, var(--black) 100%);
+  }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: center;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-img-frame {
+    position: relative;
+    aspect-ratio: 4/5;
+    background: linear-gradient(135deg, var(--maroon-deep) 0%, #2A0810 50%, var(--emerald) 100%);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .about-img-inner {
+    position: absolute; inset: 16px;
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(201,168,76,0.03);
+  }
+  .about-img-placeholder {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-weight: 300;
+    letter-spacing: 0.15em;
+    color: rgba(201,168,76,0.4);
+    text-align: center;
+    padding: 2rem;
+  }
+  .about-emblem {
+    position: absolute; bottom: -20px; right: -20px;
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--maroon), var(--maroon-deep));
+    border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold);
+    text-align: center; line-height: 1.4;
+    box-shadow: var(--shadow-gold);
+  }
+  .about-corner {
+    position: absolute; top: -12px; left: -12px;
+    width: 60px; height: 60px;
+    border-left: 2px solid var(--gold);
+    border-top: 2px solid var(--gold);
+    opacity: 0.5;
+  }
+  .about-stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .stat-card {
+    background: rgba(201,168,76,0.04);
+    border: 1px solid rgba(201,168,76,0.12);
+    padding: 1.5rem;
+    border-radius: 2px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 700;
+    color: var(--gold);
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.68rem; font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+    display: block;
+  }
+
+  /* ── COLLECTIONS ── */
+  #collections {
+    padding: 120px 0;
+    background: var(--black-soft);
+  }
+  .collections-header { text-align: center; margin-bottom: 70px; }
+  .collections-header .section-label { justify-content: center; }
+  .collections-header .section-label::before { display: none; }
+  .collections-header .section-label::after {
+    content: ''; display: block;
+    width: 30px; height: 1px; background: var(--gold); opacity: 0.6;
+  }
+  .collections-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .coll-card {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    cursor: pointer;
+    group: true;
+  }
+  .coll-bg {
+    position: absolute; inset: 0;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .coll-card:hover .coll-bg { transform: scale(1.06); }
+  .coll-card:nth-child(1) .coll-bg { background: linear-gradient(160deg, #3D0A14 0%, #1A0608 60%, #0D0A05 100%); }
+  .coll-card:nth-child(2) .coll-bg { background: linear-gradient(160deg, #1B2A1E 0%, #0D1A10 60%, #060D0A 100%); }
+  .coll-card:nth-child(3) .coll-bg { background: linear-gradient(160deg, #2A1A05 0%, #1A100A 60%, #0D0808 100%); }
+  .coll-card:nth-child(4) .coll-bg { background: linear-gradient(160deg, #1A0810 0%, #0D0608 60%, #0A0410 100%); }
+  .coll-card:nth-child(5) .coll-bg { background: linear-gradient(160deg, #0A1A14 0%, #060D0A 60%, #080808 100%); }
+  .coll-card:nth-child(6) .coll-bg { background: linear-gradient(160deg, #1A1205 0%, #0D0A04 60%, #080808 100%); }
+  .coll-pattern {
+    position: absolute; inset: 0;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .coll-card:hover .coll-pattern { opacity: 1; }
+  .coll-icon {
+    position: absolute; top: 2rem; right: 2rem;
+    font-size: 2.5rem; opacity: 0.2;
+    transition: all 0.4s;
+  }
+  .coll-card:hover .coll-icon { opacity: 0.5; transform: scale(1.1) rotate(10deg); }
+  .coll-info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+  }
+  .coll-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: brown;
+    margin-bottom: 0.4rem;
+  }
+  .coll-sub {
+    font-size: 0.7rem; letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: beige;
+    font-weight: 300;
+  }
+  .coll-hover-line {
+    height: 2px; width: 0;
+    background: linear-gradient(to right, var(--gold), var(--gold-light));
+    margin-top: 0.8rem;
+    transition: width 0.4s ease;
+  }
+  .coll-card:hover .coll-hover-line { width: 40px; }
+  .coll-border {
+    position: absolute; inset: 0;
+    border: 1px solid rgba(201,168,76,0);
+    transition: border-color 0.4s;
+  }
+  .coll-card:hover .coll-border { border-color: rgba(201,168,76,0.25); }
+
+  /* ── GALLERY ── */
+  #gallery {
+    padding: 120px 0;
+    background: var(--black);
+  }
+  .gallery-header { margin-bottom: 60px; }
+  .masonry {
+    columns: 4; column-gap: 12px;
+  }
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 12px;
+    position: relative; overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .masonry-img {
+    width: 100%; display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .masonry-item:hover .masonry-img { transform: scale(1.06); }
+  .masonry-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(107,28,42,0.7) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s;
+    display: flex; align-items: flex-end; padding: 1rem;
+  }
+  .masonry-item:hover .masonry-overlay { opacity: 1; }
+  .masonry-cap {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem; font-style: italic;
+    color: var(--gold-light);
+  }
+  /* Fake images using gradient art */
+  .img-stone { background: linear-gradient(135deg, #2D0810 0%, #4A1018 40%, #1A0810 100%); }
+  .img-bridal { background: linear-gradient(135deg, #1B0A2A 0%, #2D1040 40%, #0D0818 100%); }
+  .img-saree { background: linear-gradient(135deg, #1B2A0A 0%, #0A1B0A 40%, #0D1808 100%); }
+  .img-emb { background: linear-gradient(135deg, #2A1A0A 0%, #1A0D05 40%, #0D0808 100%); }
+  .img-gift { background: linear-gradient(135deg, #0A1A2A 0%, #0D102A 40%, #080808 100%); }
+  .img-rang { background: linear-gradient(135deg, #2A0A1B 0%, #1A051A 40%, #0D0408 100%); }
+  .masonry-item[data-type="reel"] .masonry-img::after { content: ''; }
+  .reel-badge {
+    position: absolute; top: 0.8rem; left: 0.8rem;
+    background: rgba(201,168,76,0.9);
+    color: var(--black);
+    font-size: 0.55rem; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1px;
+  }
+
+  /* ── CUSTOM ORDER ── */
+  #custom-order {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0D0608 0%, #1A0810 30%, #0D0608 60%, #0A1208 100%);
+    position: relative;
+  }
+  #custom-order::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C9A84C' fill-opacity='0.03'%3E%3Cpath d='M20 20l-1-1 1-1 1 1zm0-4l-4 4 4 4 4-4zm0 8l-4-4v-8l4-4 4 4v8z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .order-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: start;
+  }
+  .order-steps { margin-top: 2.5rem; }
+  .step {
+    display: flex; gap: 1.5rem; margin-bottom: 2rem;
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: transparent;
+    border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-weight: 600;
+    color: var(--gold);
+  }
+  .step-text h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 600;
+    color: var(--text-light); margin-bottom: 0.3rem;
+  }
+  .step-text p {
+    font-size: 0.8rem; font-weight: 300;
+    color: var(--text-muted); line-height: 1.7;
+  }
+  .order-form-card {
+    background: rgba(201,168,76,0.04);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 4px;
+    padding: 2.5rem;
+  }
+  .order-form-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 1.8rem;
+  }
+  .form-group { margin-bottom: 1.2rem; }
+  .form-group label {
+    display: block;
+    font-size: 0.65rem; font-weight: 400;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    background: rgba(201,168,76,0.04);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 2px;
+    padding: 0.75rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.82rem; font-weight: 300;
+    color: var(--text-light);
+    outline: none;
+    transition: border-color 0.3s;
+    resize: none;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(245,238,224,0.3); }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+  .form-group select option { background: var(--black-soft); }
+  
+  .wa-order-btn {
+    display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+    width: 100%;
+    background: #25D366;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.85rem;
+    border-radius: 2px;
+    text-decoration: none;
+    margin-top: 0.8rem;
+    transition: all 0.3s;
+  }
+  .wa-order-btn:hover { background: #1eb659; transform: translateY(-1px); }
+  .wa-icon { font-size: 1rem; }
+
+  .wa-chat-btn {
+    display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #25D366;
+    color: #25D366;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.8rem;
+    border-radius: 2px;
+    text-decoration: none;
+    margin-top: 0.7rem;
+    transition: all 0.3s;
+  }
+  .wa-chat-btn:hover { background: rgba(37,211,102,0.1); transform: translateY(-1px); }
+
+  /* ── WHY US ── */
+  #why-us {
+    padding: 120px 0;
+    background: var(--black-soft);
+  }
+  .why-header { text-align: center; margin-bottom: 70px; }
+  .why-header .section-label { justify-content: center; }
+  .why-header .section-label::before { display: none; }
+  .why-header .section-label::after { content: ''; display: block; width: 30px; height: 1px; background: var(--gold); opacity: 0.6; }
+  .why-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .why-card {
+    background: rgba(201,168,76,0.03);
+    border: 1px solid rgba(201,168,76,0.1);
+    border-radius: 4px;
+    padding: 2.5rem 2rem;
+    transition: all 0.4s ease;
+    position: relative; overflow: hidden;
+  }
+  .why-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    opacity: 0; transition: opacity 0.4s;
+  }
+  .why-card:hover { border-color: rgba(201,168,76,0.25); background: rgba(201,168,76,0.06); }
+  .why-card:hover::before { opacity: 1; }
+  .why-icon {
+    font-size: 2rem; margin-bottom: 1.2rem; display: block;
+  }
+  .why-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--text-light); margin-bottom: 0.7rem;
+  }
+  .why-desc {
+    font-size: 0.78rem; font-weight: 300;
+    color: var(--text-muted); line-height: 1.8;
+  }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials {
+    padding: 120px 0;
+    background: var(--black);
+  }
+  .testimonials-header { text-align: center; margin-bottom: 70px; }
+  .testimonials-header .section-label { justify-content: center; }
+  .testimonials-header .section-label::before { display: none; }
+  .testimonials-header .section-label::after { content: ''; display: block; width: 30px; height: 1px; background: var(--gold); opacity: 0.6; }
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .testi-card {
+    background: linear-gradient(135deg, rgba(107,28,42,0.08) 0%, rgba(201,168,76,0.04) 100%);
+    border: 1px solid rgba(201,168,76,0.12);
+    border-radius: 4px;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.4s ease;
+  }
+  .testi-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); box-shadow: var(--shadow-gold); }
+  .testi-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; line-height: 1;
+    color: var(--gold); opacity: 0.3;
+    margin-bottom: 0.5rem;
+  }
+  .testi-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-style: italic;
+    color: var(--text-light); line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  .testi-stars { color: var(--gold); font-size: 0.8rem; margin-bottom: 1.2rem; letter-spacing: 2px; }
+  .testi-author { display: flex; align-items: center; gap: 0.8rem; }
+  .testi-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--maroon), var(--maroon-deep));
+    border: 1px solid rgba(201,168,76,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-weight: 600; color: var(--gold);
+    flex-shrink: 0;
+  }
+  .testi-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem; font-weight: 600;
+    color: var(--text-light);
+  }
+  .testi-loc {
+    font-size: 0.65rem; letter-spacing: 0.1em;
+    color: var(--text-muted); margin-top: 0.2rem;
+  }
+
+  /* ── INSTAGRAM ── */
+  #instagram {
+    padding: 100px 0;
+    background: var(--black-soft);
+    text-align: center;
+  }
+  .insta-header { margin-bottom: 50px; }
+  .insta-grid {
+    display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 56px; margin-bottom: 3rem;
+  }
+  .insta-item {
+    width: 200%;
+    height: 100%;
+    aspect-ratio: 1;
+    position: relative; overflow: hidden;
+    cursor: pointer;
+  }
+  .insta-item-bg {
+    width: 100%; height: 100%;
+    transition: transform 0.5s ease;
+  }
+  .insta-item:hover .insta-item-bg { transform: scale(1.08); }
+  .insta-overlay {
+    position: absolute; inset: 0;
+    opacity: 0; transition: opacity 0.3s;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+  }
+  .insta-item:hover .insta-overlay { opacity: 1; }
+  
+  .insta-handle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-style: italic;
+    color: var(--gold-light); margin-bottom: 1.5rem;
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0D0608 0%, #120A0A 50%, #080D08 100%);
+  }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+  }
+  .contact-info-item {
+    display: flex; gap: 1rem; align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  .contact-icon {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; flex-shrink: 0;
+  }
+  .contact-info-item h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem; font-weight: 600;
+    color: var(--text-light); margin-bottom: 0.3rem;
+  }
+  .contact-info-item p {
+    font-size: 0.8rem; font-weight: 300;
+    color: var(--text-muted);
+  }
+  .contact-info-item a {
+    color: var(--gold); text-decoration: none;
+    font-size: 0.8rem; font-weight: 300;
+    transition: color 0.3s;
+  }
+  .contact-info-item a:hover { color: var(--gold-light); }
+  .map-placeholder {
+    width: 100%; height: 180px;
+    background: rgba(201,168,76,0.04);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem; color: var(--text-muted);
+    letter-spacing: 0.1em; margin-top: 2rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #08030A;
+    border-top: 1px solid rgba(201,168,76,0.15);
+    padding: 60px 0 30px;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    gap: 50px; margin-bottom: 50px;
+  }
+  .footer-brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 600;
+    color: var(--gold); margin-bottom: 0.5rem;
+  }
+  .footer-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem; font-style: italic;
+    color: var(--text-muted); margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
+  .footer-socials {
+    display: flex; gap: 0.7rem;
+  }
+  .footer-social {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem; text-decoration: none;
+    transition: all 0.3s;
+    color: var(--text-muted);
+  }
+  .footer-social:hover { background: var(--maroon); border-color: var(--gold); color: var(--gold); }
+  .footer-col h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 0.7rem; }
+  .footer-links a {
+    font-size: 0.8rem; font-weight: 300;
+    color: var(--text-muted);
+    text-decoration: none; transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--gold-light); }
+  .footer-bottom {
+    border-top: 1px solid rgba(201,168,76,0.08);
+    padding-top: 25px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom p {
+    font-size: 0.72rem; font-weight: 300;
+    color: var(--text-muted);
+  }
+  .footer-love {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem; font-style: italic;
+    color: var(--gold); opacity: 0.7;
+  }
+
+  /* ── FLOATING WA ── */
+  .floating-wa {
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+    width: 136px; height: 100px; border-radius: 50%;
+    background: #25D366;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: all 2.3s;
+    animation: waPulse 4.5s infinite;
+  }
+  .floating-wa:hover { transform: scale(1.4); box-shadow: 0 6px 30px rgba(37,211,102,0.6); }
+  @keyframes waPulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+    50% { box-shadow: 0 4px 30px rgba(37,211,102,0.6), 0 0 0 8px rgba(37,211,102,0.1); }
+  }
+
+  /* ── MOBILE NAV MENU ── */
+  .mobile-menu {
+  display: none;
+  position: fixed; inset: 0; z-index: 1001;
+  background: rgba(13,6,8,0.97);
+  backdrop-filter: blur(20px);
+  flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu .nav-links {
+  display: flex !important;
+  flex-direction: column; gap: 2rem; text-align: center;
+}
+.mobile-menu .nav-links a { font-size: 1.2rem !important; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .collections-grid { grid-template-columns: repeat(2, 1fr); }
+    .masonry { columns: 3; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .insta-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .about-grid { grid-template-columns: 1fr; gap: 50px; }
+    .order-grid { grid-template-columns: 1fr; gap: 50px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .masonry { columns: 2; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .collections-grid { grid-template-columns: 1fr; }
+    .insta-grid { grid-template-columns: repeat(3, 1fr); }
+    .hero-dots { display: none; }
+    .hero-ring { display: none; }
+  }
+  @media (max-width: 480px) {
+    .why-grid { grid-template-columns: 1fr; }
+    .about-stats { grid-template-columns: 1fr 1fr; }
+    .masonry { columns: 2; }
+    .insta-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/919890591808" class="floating-wa" target="_blank" title="Order on WhatsApp" style="font-size: 3rem;">💬</a>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" onclick="toggleMenu()">✕</button>
+  <ul class="nav-links">
+    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+    <li><a href="#collections" onclick="toggleMenu()">Collections</a></li>
+    <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
+    <li><a href="#custom-order" onclick="toggleMenu()">Custom Order</a></li>
+    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    <li><a href="https://wa.me/919890591808" class="nav-cta" target="_blank">WhatsApp Us</a></li>
+  </ul>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Ankuuu <span>Art Fashion</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#collections">Collections</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#custom-order">Custom Order</a></li>
+    <li><a href="#instagram">Instagram</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://wa.me/919890591808" class="nav-cta" target="_blank">WhatsApp Us</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-ring"></div>
+  <div class="hero-ring"></div>
+  <div class="hero-ring"></div>
+  <div class="hero-dots">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ Premium Handcrafted Artistry ✦</div>
+    <h1 class="hero-title">
+      Handcrafted<br>
+      <em>Ethnic Art</em>
+      & Fashion
+    </h1>
+    <p class="hero-sub">Custom stone work, embroidery, blouse designs & handmade creations crafted with elegance. Each piece tells a story of tradition and artistry.</p>
+    <div class="hero-btns">
+      <a href="#collections" class="btn-primary">Explore Collection</a>
+      <a href="https://wa.me/919890591808?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20your%20collections." class="btn-whatsapp" target="_blank">
+        <span class="wa-icon">💬</span> Order on WhatsApp
+      </a>
+    </div>
+  </div>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <div class="marquee-item">Stone Work Embroidery</div>
+    <div class="marquee-item">Bridal Blouse Designs</div>
+    <div class="marquee-item">Saree Customization</div>
+    <div class="marquee-item">Handmade Gifts</div>
+    <div class="marquee-item">Rangoli Art</div>
+    <div class="marquee-item">Ethnic Fashion</div>
+    <div class="marquee-item">Traditional Artistry</div>
+    <div class="marquee-item">Stone Work Embroidery</div>
+    <div class="marquee-item">Bridal Blouse Designs</div>
+    <div class="marquee-item">Saree Customization</div>
+    <div class="marquee-item">Handmade Gifts</div>
+    <div class="marquee-item">Rangoli Art</div>
+    <div class="marquee-item">Ethnic Fashion</div>
+    <div class="marquee-item">Traditional Artistry</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal-left">
+        <div class="about-img-frame">
+          <div class="about-corner"></div>
+          <div class="about-img-inner">
+            <div class="about-img-placeholder">
+<img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\artist.jpeg" width="100%" height="100%" alt="Ankuuu Art Fashion" title="Ankuuu Art Fashion">
+            </div>
+          </div>
+          <div class="about-emblem">Handmade<br>with Love</div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">200+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">7+</span>
+            <span class="stat-label">Art Specialties</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Handcrafted</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">5★</span>
+            <span class="stat-label">Customer Rating</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-text reveal-right">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">Where Tradition<br>Meets <em>Artistry</em></h2>
+        <div class="gold-divider"></div>
+        <p class="section-sub">Ankuuu Art Fashion was born from a deep love for India's rich textile heritage and handcrafted traditions. Every stitch, every stone, every brushstroke is an act of devotion to the art form.</p>
+        <p style="font-size:0.85rem;font-weight:300;color:var(--text-muted);line-height:2;margin-top:1.5rem;">
+          What began as a passion for creating beautiful, one-of-a-kind pieces has grown into a boutique brand that celebrates the extraordinary skill of traditional Indian artisanship. We specialize in stone work embroidery, blouse designs, saree customization, and decorative art — each piece crafted with patience, precision, and love.
+        </p>
+        <p style="font-size:0.85rem;font-weight:300;color:var(--text-muted);line-height:2;margin-top:1rem;">
+          Our creations are not mass-produced — they are personal. Every order is an intimate collaboration between artist and client, resulting in something truly unique and meaningful.
+        </p>
+        <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#custom-order" class="btn-primary">Start Your Order</a>
+          <a href="#collections" style="font-family:'Poppins',sans-serif;font-size:0.72rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:0.5rem;border-bottom:1px solid rgba(201,168,76,0.3);padding-bottom:2px;">View Collections →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLECTIONS -->
+<section id="collections">
+  <div class="container">
+    <div class="collections-header reveal">
+      <div class="section-label">Featured Collections</div>
+      <h2 class="section-title">Crafted with <em>Elegance</em></h2>
+      <p class="section-sub" style="margin:0.8rem auto 0;text-align:center;">Explore our signature handcrafted categories, each a world of its own artistry.</p>
+    </div>
+  </div>
+  <div style="padding:0 5vw;">
+    <div class="collections-grid">
+      <div class="coll-card reveal" style="transition-delay:0.1s">
+        <div class="coll-bg"><img src="c:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\stoneworkdesign.jpeg" width="100%" height="100%" alt="Stone Work Designs" title="Stone Work Designs"></div>
+        <div class="coll-pattern"></div>
+        <div class="coll-border"></div>
+        <div class="coll-icon">💎</div>
+        <div class="coll-info">
+          <div class="coll-name">Stone Work Designs</div>
+          <div class="coll-sub">Kundan · Jadau · Crystal</div>
+          <div class="coll-hover-line"></div>
+        </div>
+      </div>
+      <div class="coll-card reveal" style="transition-delay:0.2s">
+        <div class="coll-bg"><img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\bridalblouse.jpeg" width="100%" height="100%" alt="Bridal Blouse Work"></div>
+        <div class="coll-pattern"></div>
+        <div class="coll-border"></div>
+        <div class="coll-icon">👑</div>
+        <div class="coll-info">
+          <div class="coll-name">Bridal Blouse Work</div>
+          <div class="coll-sub">Custom · Bespoke · Luxury</div>
+          <div class="coll-hover-line"></div>
+        </div>
+      </div>
+            <div class="coll-card reveal" style="transition-delay:0.15s">
+        <div class="coll-bg"><img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\blousework.jpeg" width="100%" height="100%" alt="Blouse Work"></div>
+        <div class="coll-pattern"></div>
+        <div class="coll-border"></div>
+        <div class="coll-icon">🪡</div>
+        <div class="coll-info">
+          <div class="coll-name">Blouse Work</div>
+          <div class="coll-sub">Aari · Kantha · Mirror work</div>
+          <div class="coll-hover-line"></div>
+        </div>
+      </div>
+      <div class="coll-card reveal" style="transition-delay:0.3s">
+        <div class="coll-bg"><img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\sareeborder.jpeg" width="100%" height="100%" alt="Saree Border Designs"></div>
+        <div class="coll-pattern"></div>
+        <div class="coll-border"></div>
+        <div class="coll-icon">🌸</div>
+        <div class="coll-info">
+          <div class="coll-name">Saree Border Designs</div>
+          <div class="coll-sub">Zari · Hand-painted · Thread</div>
+          <div class="coll-hover-line"></div>
+        </div>
+      </div>
+      <div class="coll-card reveal" style="transition-delay:0.15s">
+        <div class="coll-bg"><img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\embroideryart.jpeg" width="100%" height="100%" alt="Embroidery Art"></div>
+        <div class="coll-pattern"></div>
+        <div class="coll-border"></div>
+        <div class="coll-icon">🪡</div>
+        <div class="coll-info">
+          <div class="coll-name">Embroidery Art</div>
+          <div class="coll-sub">Textured · Artisan · Handcrafted</div>
+          <div class="coll-hover-line"></div>
+        </div>
+      </div>
+      <div class="coll-card reveal" style="transition-delay:0.25s">
+        <div class="coll-bg"><img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\handmadegift.jpeg" width="100%" height="100%" alt="Handmade Gifts"></div>
+        <div class="coll-pattern"></div>
+        <div class="coll-border"></div>
+        <div class="coll-icon">🎁</div>
+        <div class="coll-info">
+          <div class="coll-name">Handmade Gifts</div>
+          <div class="coll-sub">Festive · Personal · Unique</div>
+          <div class="coll-hover-line"></div>
+        </div>
+      </div>
+      <div class="coll-card reveal" style="transition-delay:0.35s">
+        <div class="coll-bg"><img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\rangoliart.jpeg" width="100%" height="100%" alt="Rangoli Art"></div>
+        <div class="coll-pattern"></div>
+        <div class="coll-border"></div>
+        <div class="coll-icon">🌺</div>
+        <div class="coll-info">
+          <div class="coll-name">Rangoli Art</div>
+          <div class="coll-sub">Traditional · Decorative · Festive</div>
+          <div class="coll-hover-line"></div>
+        </div>
+      </div>
+      <div class="coll-card reveal" style="transition-delay:0.1s">
+        <div class="coll-bg"><img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\stonenath.jpeg" width="100%" height="100%" alt="Stone Nath"></div>
+        <div class="coll-pattern"></div>
+        <div class="coll-border"></div>
+        <div class="coll-icon">💎</div>
+        <div class="coll-info">
+          <div class="coll-name">Stone Nath</div>
+          <div class="coll-sub">Kundan · Jadau · Crystal</div>
+          <div class="coll-hover-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <div class="section-label">Art Gallery</div>
+      <h2 class="section-title">The <em>Craft</em> in Detail</h2>
+      <p class="section-sub">Every piece photographed is a glimpse into hours of dedicated handwork.</p>
+    </div>
+    <div class="masonry">
+      <div class="masonry-item reveal" style="height:260px">
+        <div class="masonry-img img-stone" style="height:100%"><img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\blouse1.jpeg" width="100%" height="100%" alt="Stone Work Blouse"></div>
+        <div class="masonry-overlay"><div class="masonry-cap">Stone Work Blouse</div></div>
+      </div>
+      <div class="masonry-item reveal" style="height:340px;transition-delay:0.1s">
+        <div class="masonry-img img-bridal" style="height:100%"><video src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\video\resin.mp4" autoplay muted loop height="100%" width="100%" alt="Bridal Blouse Process"></video></div>
+        <div class="reel-badge">Reel</div>
+        <div class="masonry-overlay"><div class="masonry-cap">Resin Necklace</div></div>
+      </div>
+      <div class="masonry-item reveal" style="height:220px;transition-delay:0.2s">
+        <div class="masonry-img img-saree" style="height:100%"><img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\sareeborder.jpeg" width="100%" height="100%" alt="Saree Border Art"></div>
+        <div class="masonry-overlay"><div class="masonry-cap">Saree Border Art</div></div>
+      </div>
+      <div class="masonry-item reveal" style="height:300px;transition-delay:0.3s">
+        <div class="masonry-img img-emb" style="height:100%"><img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\fabric panting.jpeg" width="100%" height="100%" alt="Aari Embroidery"></div>
+        <div class="masonry-overlay"><div class="masonry-cap">Fabric painting Sarii</div></div>
+      </div>
+      <div class="masonry-item reveal" style="height:280px;transition-delay:0.05s">
+        <div class="masonry-img img-gift" style="height:100%"><img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\stonenath1.jpeg" width="100%" height="100%" alt="Festive Gift Box"></div>
+        <div class="masonry-overlay"><div class="masonry-cap">Stone Nath</div></div>
+      </div>
+      <div class="masonry-item reveal" style="height:280px;transition-delay:0.05s">
+        <div class="masonry-img img-gift" style="height:100%"><img src="c:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\fabricpainting.jpeg" width="100%" height="100%" alt="Festive Gift Box"></div>
+        <div class="masonry-overlay"><div class="masonry-cap">Fabric Painting</div></div>
+      </div>
+      <div class="masonry-item reveal" style="height:320px;transition-delay:0.25s">
+        <div class="masonry-img img-stone" style="height:100%;filter:hue-rotate(30deg)"><img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\blouse2.jpeg" width="100%" height="100%" alt="Custom Blouse Detail"></div>
+        <div class="masonry-overlay"><div class="masonry-cap">Custom Blouse Detail</div></div>
+      </div>
+      <div class="masonry-item reveal" style="height:240px;transition-delay:0.35s">
+        <div class="masonry-img img-bridal" style="height:100%;filter:hue-rotate(-20deg)"><img src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\images\aariembriodery.jpeg" width="100%" height="100%" alt="Aari Embroidery"></div>
+        <div class="masonry-overlay"><div class="masonry-cap">Aari Embroidery</div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem" class="reveal">
+      <a href="https://www.instagram.com/ankuuuu_art_fashion?igsh=MTdxNzg1OWp0anFrNw==" target="_blank" class="btn-primary">View More on Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM ORDER -->
+<section id="custom-order">
+  <div class="container">
+    <div class="order-grid">
+      <div class="order-left reveal-left">
+        <div class="section-label">Custom Orders</div>
+        <h2 class="section-title">Your Vision,<br><em>Our Craft</em></h2>
+        <div class="gold-divider"></div>
+        <p class="section-sub">Every piece we create is tailored to your desires. Share your dream design and we'll bring it to life with the finest handcrafted artistry.</p>
+        <div class="order-steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <h4>Share Your Vision</h4>
+              <p>Send us your design inspiration via WhatsApp or our inquiry form. Reference images welcome.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <h4>Design Consultation</h4>
+              <p>We discuss your requirements, measurements, material preferences, and budget in detail.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-text">
+              <h4>Crafting Your Piece</h4>
+              <p>Our artisan begins handcrafting your order with regular progress updates shared with you.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-text">
+              <h4>Delivery & Delight</h4>
+              <p>Your creation is carefully packaged and delivered with love. Pan-India shipping available.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order-right reveal-right">
+        <div class="order-form-card">
+          <h3>Request a Custom Order</h3>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="order-name" placeholder="e.g. Priya Sharma"/>
+          </div>
+          <div class="form-group">
+            <label>Phone / WhatsApp</label>
+            <input type="tel" id="order-phone" placeholder="+91 98905 91808"/>
+          </div>
+          <div class="form-group">
+            <label>Type of Work</label>
+            <select id="order-type">
+              <option value="">Select a category...</option>
+              <option>Stone Work Embroidery</option>
+              <option>Bridal Blouse Design</option>
+              <option>Saree Customization</option>
+              <option>Embroidery Art</option>
+              <option>Handmade Gift</option>
+              <option>Rangoli Art</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Describe Your Design</label>
+            <textarea rows="4" id="order-details" placeholder="Tell us about your design vision, occasion, colours, any reference images you have..."></textarea>
+          </div>
+          <p id="order-error" style="display:none;color:#e46a6a;font-size:0.7rem;margin-bottom:0.8rem;letter-spacing:0.02em;"></p>
+          <button type="button" class="wa-order-btn" onclick="sendCustomOrder()">
+            <span class="wa-icon">📩</span> Submit Order
+          </button>
+          <a href="https://wa.me/919890591808?text=Hi%20Ankuuu%20Art%20Fashion!%20I%27d%20like%20to%20place%20a%20custom%20order." class="wa-chat-btn" target="_blank">
+            <span class="wa-icon">💬</span> Chat on WhatsApp
+          </a>
+          <p style="font-size:0.65rem;color:var(--text-muted);text-align:center;margin-top:1rem;letter-spacing:0.05em;">✦ Pan-India shipping · Estimated 7–21 days · Advance booking required ✦</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us">
+  <div class="container">
+    <div class="why-header reveal">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">The <em>Ankuuu</em> Promise</h2>
+      <p class="section-sub" style="text-align:center;margin:0.8rem auto 0;">Craftsmanship you can feel, quality you can see, luxury you can afford.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal" style="transition-delay:0.1s">
+        <span class="why-icon">🤲</span>
+        <div class="why-title">Handmade Craftsmanship</div>
+        <p class="why-desc">Every piece is crafted entirely by hand — no machines, no shortcuts. Pure artisan work infused with patience and passion.</p>
+      </div>
+      <div class="why-card reveal" style="transition-delay:0.2s">
+        <span class="why-icon">✨</span>
+        <div class="why-title">Unique Designs</div>
+        <p class="why-desc">No two pieces are alike. Your creation is yours alone — a truly one-of-a-kind work of art you won't find anywhere else.</p>
+      </div>
+      <div class="why-card reveal" style="transition-delay:0.3s">
+        <span class="why-icon">💎</span>
+        <div class="why-title">Premium Finishing</div>
+        <p class="why-desc">We use the finest stones, threads, and materials. Every edge is finished to boutique-quality standards before delivery.</p>
+      </div>
+      <div class="why-card reveal" style="transition-delay:0.15s">
+        <span class="why-icon">💝</span>
+        <div class="why-title">Personalized Orders</div>
+        <p class="why-desc">We work closely with you throughout the process — your preferences, your measurements, your story woven into the design.</p>
+      </div>
+      <div class="why-card reveal" style="transition-delay:0.25s">
+        <span class="why-icon">🌺</span>
+        <div class="why-title">Traditional + Modern Style</div>
+        <p class="why-desc">Ancient Indian art forms reinterpreted through a contemporary lens — heritage designs that feel utterly current and wearable.</p>
+      </div>
+      <div class="why-card reveal" style="transition-delay:0.35s">
+        <span class="why-icon">🏷️</span>
+        <div class="why-title">Affordable Luxury</div>
+        <p class="why-desc">Boutique-quality artistry without boutique-store pricing. Premium handmade work made accessible, because beauty should be for everyone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="testimonials-header reveal">
+      <div class="section-label">Client Love</div>
+      <h2 class="section-title">What Our <em>Clients</em> Say</h2>
+      <p class="section-sub" style="text-align:center;margin:0.8rem auto 0;">Words from the women who wear our art with pride.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal" style="transition-delay:0.1s">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">The stone work on my wedding blouse was absolutely breathtaking. Every guest kept asking where I got it. Ankuuu's craftsmanship is unmatched!</p>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-author">
+          <div class="testi-avatar">T</div>
+          <div>
+            <div class="testi-name">Tanishka khutwad</div>
+            <div class="testi-loc">Mumbai, Maharashtra</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal" style="transition-delay:0.2s">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">I ordered a customized saree border for Diwali and it was beyond my expectations. The gold thread work was so intricate and beautiful. Will definitely order again.</p>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-author">
+          <div class="testi-avatar">K</div>
+          <div>
+            <div class="testi-name">Komal mandhare</div>
+            <div class="testi-loc">Pune, Maharashtra</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal" style="transition-delay:0.3s">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">The rangoli art piece I ordered as a gift was absolutely stunning. My mother was in tears when she saw it. Truly handmade with love and incredible skill.</p>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-author">
+          <div class="testi-avatar">N</div>
+          <div>
+            <div class="testi-name">Nikita Kalbhor</div>
+            <div class="testi-loc">Pune, Maharashtra</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram">
+  <div class="container">
+    <div class="insta-header reveal">
+      <div class="section-label" style="justify-content:center"><span style="width:30px;height:1px;background:var(--gold);opacity:0.6;display:block"></span> Follow Our Journey <span style="width:30px;height:1px;background:var(--gold);opacity:0.6;display:block"></span></div>
+      <h2 class="section-title">Behind the <em>Craft</em></h2>
+      <p class="section-sub" style="margin:0.8rem auto 0;text-align:center">Stories, reels, and process videos on Instagram. Join our creative community.</p>
+      <div class="insta-handle" style="margin-top:1rem">@ankuuuu_art_fashion</div>
+    </div>
+    <div class="insta-grid reveal">
+      <div class="insta-item"><video class="insta-item-bg" autoplay muted loop><source src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\video\blousevideo1.mp4" style="width: 100px; height: 100px;" type="video/mp4"></video><div class="insta-overlay"></div></div>
+      <div class="insta-item"><video class="insta-item-bg" autoplay muted loop><source src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\video\blousevideo2.mp4" style="width: 100px; height: 100px;" type="video/mp4"></video><div class="insta-overlay"></div></div>
+      <div class="insta-item"><video class="insta-item-bg" autoplay muted loop><source src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\video\fabricpaint1.mp4" style="width: 100px; height: 100px;" type="video/mp4"></video><div class="insta-overlay"></div></div>
+      <div class="insta-item"><video class="insta-item-bg" autoplay muted loop><source src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\video\blousevideo4.mp4" style="width: 100px; height: 100px;" type="video/mp4"></video><div class="insta-overlay"></div></div>
+      <div class="insta-item"><video class="insta-item-bg" autoplay muted loop><source src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\video\blousevideo5.mp4" style="width: 100px; height: 100px;" type="video/mp4"></video><div class="insta-overlay"></div></div>
+      <div class="insta-item"><video class="insta-item-bg" autoplay muted loop><source src="C:\Users\Rajkumari\OneDrive\Documents\Desktop\wesitephoto\video\blouse3.mp4" style="width: 100px; height: 100px;" type="video/mp4"></video><div class="insta-overlay"></div></div>
+    </div>
+    <div class="reveal" style="text-align:center">
+      <a href="https://www.instagram.com/ankuuuu_art_fashion?igsh=MTdxNzg1OWp0anFrNw==" target="_blank" class="btn-primary">Follow on Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left reveal-left">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Let's Create<br><em>Together</em></h2>
+        <div class="gold-divider"></div>
+        <p class="section-sub">Have a question or ready to place an order? Reach out — we'd love to hear from you.</p>
+        <div style="margin-top:2.5rem">
+          <div class="contact-info-item">
+            <div class="contact-icon">💬</div>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/919890591808" target="_blank">+91 98905 91808</a>
+              <p style="margin-top:0.2rem">Preferred for quick orders & enquiries</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">📸</div>
+            <div>
+              <h4>Instagram</h4>
+              <a href="https://www.instagram.com/ankuuuu_art_fashion?igsh=MTdxNzg1OWp0anFrNw==" target="_blank">@ankuuu.art.fashion</a>
+              <p style="margin-top:0.2rem">DM us for orders & collaborations</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">📦</div>
+            <div>
+              <h4>Shipping</h4>
+              <p>Pan-India delivery available<br>Express options on request</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right reveal-right">
+        <div class="order-form-card">
+          <h3>Send a Message</h3>
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="contact-name" placeholder="Your full name"/>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="contact-email" placeholder="your@email.com"/>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" id="contact-subject" placeholder="e.g. Bridal blouse enquiry"/>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="5" id="contact-message" placeholder="Share your thoughts, requirements, or questions..."></textarea>
+          </div>
+          <p id="contact-error" style="display:none;color:#e46a6a;font-size:0.7rem;margin-bottom:0.8rem;letter-spacing:0.02em;"></p>
+          <button type="button" class="wa-order-btn" onclick="sendContactForm()">
+            <span class="wa-icon">📩</span> Submit Message
+          </button>
+          <a href="https://wa.me/919890591808" class="wa-chat-btn" target="_blank">
+            <span class="wa-icon">💬</span> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Ankuuu Art Fashion</div>
+        <p class="footer-tagline">"Handcrafted with love, designed with soul —<br>where tradition meets modern elegance."</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/ankuuuu_art_fashion" class="footer-social" target="_blank">📸</a>
+          <a href="https://wa.me/919890591808" class="footer-social" target="_blank">💬</a>
+          <a href="https://pinterest.com" class="footer-social" target="_blank">📌</a>
+          <a href="#contact" class="footer-social">✉️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul class="footer-links">
+          <li><a href="#collections">Stone Work</a></li>
+          <li><a href="#collections">Bridal Blouse</a></li>
+          <li><a href="#collections">Saree Designs</a></li>
+          <li><a href="#collections">Embroidery Art</a></li>
+          <li><a href="#collections">Handmade Gifts</a></li>
+          <li><a href="#collections">Rangoli Art</a></li>
+          <li><a href="#collections">Stone Nath</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#custom-order">Custom Orders</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#instagram">Instagram</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Order Info</h4>
+        <ul class="footer-links">
+          <li><a href="#custom-order">How to Order</a></li>
+          <li><a href="#contact">Delivery & Shipping</a></li>
+          <li><a href="#contact">Return Policy</a></li>
+          <li><a href="#contact">FAQ</a></li>
+          <li><a href="#contact">Wholesale Enquiry</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Ankuuu Art Fashion. All rights reserved.</p>
+      <p class="footer-love">✦ Handmade with love in India ✦</p>
+      <p>Designed for artisans, by artisans.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // NAV SCROLL
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // MOBILE MENU
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // SCROLL REVEAL
+  const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  reveals.forEach(r => revealObserver.observe(r));
+
+  // SMOOTH CLOSE MOBILE MENU ON OUTSIDE CLICK
+  document.getElementById('mobileMenu').addEventListener('click', function(e) {
+    if (e.target === this) toggleMenu();
+  });
+
+  // ── WHATSAPP OWNER NUMBER ──
+  // Change this if the business WhatsApp number ever changes.
+  const OWNER_WHATSAPP_NUMBER = "919890591808";
+
+  // ── CUSTOM ORDER FORM → WHATSAPP ──
+  function sendCustomOrder() {
+    const name = document.getElementById('order-name').value.trim();
+    const phone = document.getElementById('order-phone').value.trim();
+    const type = document.getElementById('order-type').value.trim();
+    const details = document.getElementById('order-details').value.trim();
+    const errorEl = document.getElementById('order-error');
+
+    if (!name || !phone || !details) {
+      errorEl.textContent = "Please fill in your name, phone number, and design description before submitting.";
+      errorEl.style.display = "block";
+      return;
+    }
+    errorEl.style.display = "none";
+
+    let message = "Hi Ankuuu Art Fashion! I'd like to place a custom order.\n\n";
+    message += "Name: " + name + "\n";
+    message += "Phone: " + phone + "\n";
+    if (type) message += "Type of Work: " + type + "\n";
+    message += "Design Details: " + details;
+
+    const url = "https://wa.me/" + OWNER_WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+  }
+
+  // ── CONTACT FORM → WHATSAPP ──
+  function sendContactForm() {
+    const name = document.getElementById('contact-name').value.trim();
+    const email = document.getElementById('contact-email').value.trim();
+    const subject = document.getElementById('contact-subject').value.trim();
+    const msg = document.getElementById('contact-message').value.trim();
+    const errorEl = document.getElementById('contact-error');
+
+    if (!name || !msg) {
+      errorEl.textContent = "Please fill in your name and message before submitting.";
+      errorEl.style.display = "block";
+      return;
+    }
+    errorEl.style.display = "none";
+
+    let message = "Hi Ankuuu Art Fashion! I have an enquiry.\n\n";
+    message += "Name: " + name + "\n";
+    if (email) message += "Email: " + email + "\n";
+    if (subject) message += "Subject: " + subject + "\n";
+    message += "Message: " + msg;
+
+    const url = "https://wa.me/" + OWNER_WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+  }
+</script>
+</body>
+</html>
